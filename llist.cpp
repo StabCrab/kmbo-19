@@ -117,7 +117,10 @@ void LList::reverse()
 
 LList::~LList()
 {
-    //XZ
+    for (int i = 0; i < this->size(); i++)
+    {
+        this->pop_front();
+    }
 }
 LList::Node LList::getHead() const {
     return *head;
